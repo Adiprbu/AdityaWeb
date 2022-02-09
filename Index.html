@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AdityaWeb - Home</title>
+
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <script src="js/bootstrap.bundle.min.js"></script>
+  <script src="js/script.js"></script>
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/index.css">
+
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-tablet navbar-dark fixed-top bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="Index.html">AdityaWeb</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse"
+            aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav me-auto mb-2 mb-mphone-0">
+                <li class="nav-item">
+                    <a class="nav-link disabled" aria-current="page" href="Index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="Blogs.html">Blogs</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="About.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="Archives.html">Archives</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="Contact.html">Contact</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" href="Help.html">Help</a>
+                </li>
+            </ul>
+            <form class="d-none d-tablet-flex">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+  <main class="container">
+    <div class="bg-light p-5 rounded">
+      <h1 class="text-center">Welcome to AdityaWeb!</h1>      
+      <p class="lead">This example is a quick exercise to illustrate how fixed to top navbar works. As you scroll, it
+        will remain fixed to the top of your browser’s viewport.</p>
+      <a class="btn btn-mphone btn-primary" href="../components/navbar/" role="button">View navbar docs &raquo;</a>
+    </div>
+  </main>
+
+  <div class="container">
+    <footer class="py-1 my-1 p-1">
+      <ul class="nav justify-content-center border-bottom pb-3 mb-3 list-unstyled">
+        <li><a href="https://github.com/Adiprbu" target="_blank" class="nav-link px-2 text-muted">GitHub</a></li>
+        <li><a href="https://instagram.com/adityasprabhu11" target="_blank" class="nav-link px-2 text-muted">Instagram</a></li>       
+      </ul>
+    <p class="text-center text-muted">&copy; 2021 AdityaWeb</p>
+    <!-- <p><a href="#">Back to top</a></p> Create a button showing top icon-->
+  </footer>
+  </div>
+
+  <script>
+    let arrow = document.querySelectorAll(".arrow");
+    for (var i = 0; i < arrow.length; i++) {
+      arrow[i].addEventListener("click", (e) => {
+        let arrowParent = e.target.parentElement.parentElement;//selecting main parent of arrow
+        arrowParent.classList.toggle("showMenu");
+      });
+    }
+    let sidebar = document.querySelector(".sidebar");
+    let sidebarBtn = document.querySelector(".bx-menu");
+    console.log(sidebarBtn);
+    sidebarBtn.addEventListener("click", () => {
+      sidebar.classList.toggle("close");
+    });
+  </script>
+  <script src="script.js"></script>
+</body>
+
+</html>
